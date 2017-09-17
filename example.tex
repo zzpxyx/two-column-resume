@@ -1,0 +1,97 @@
+\documentclass{two-column-resume}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+
+\begin{document}
+\name{First}{Last}
+\contact{\href{mailto:email@here.com}{email@here.com} | +0 (000) 000-0000}
+\headerline
+\noindent
+\begin{minipage}[t]{0.33\textwidth}
+    \vspace{0.5\baselineskip}
+    \section{Links}
+        \shortitem{Link 1}
+        \itemdetails{\href{Link 1}{Link 1}}
+        \shortitem{Link 2}
+        \itemdetails{\href{Link 2}{Link 2}}
+    \section{Education}
+        \longitem{Degree 1}{Major 1}{School 1}{Graduate Date 1}
+        \longitem{Degree 2}{Major 2}{School 2}{Graduate Date 2}
+    \section{Skills}
+        \shortitem{Languages}
+        \itemdetails{
+            A\\%
+            Long\\%
+            List\\%
+            Of\\%
+            Languages\\%
+        }
+        \shortitem{Technologies}
+        \itemdetails{
+            A\\%
+            Long\\%
+            List\\%
+            Of\\%
+            Technologies\\%
+            Like\\%
+            Tools\\%
+            And\\%
+            SDKs\\%
+        }
+        \shortitem{Other}
+        \itemdetails{
+            Maybe\\%
+            A\\%
+            List\\%
+            Of\\%
+            Other\\%
+            Stuff\\%
+        }
+\end{minipage}% This hacky percent sign is for removing the space between two columns.
+\begin{minipage}[t]{0.67\textwidth}
+    \vspace{0.5\baselineskip}
+    \section{Experience}
+        \longitem{Job Title 1}{}{Company 1}{Start Date 1 - End Date 1}
+        \itemdetails{
+            \begin{itemize}[itemsep=0pt]
+                \item Descriptions.
+                \item Descriptions.
+                \item Descriptions.
+                \item Descriptions.
+                \item Descriptions.
+            \end{itemize}
+        }
+        \longitem{Job Title 2}{}{Company 2}{Start Date 2 - End Date 2}
+        \itemdetails{
+            \begin{itemize}[itemsep=0pt]
+                \item Descriptions.
+                \item Descriptions.
+                \item Descriptions.
+                \item Descriptions.
+                \item Descriptions.
+            \end{itemize}
+        }
+    \section{Projects}
+        \longitem{Project Title 1}{}{Place 1}{Start Date 1 - End Date 1}
+        \itemdetails{
+            Use itemize environment like above or just texts.
+        }
+        \longitem{Project Title 2}{}{Place 2}{Start Date 2 - End Date 2}
+        \itemdetails{
+            Use itemize environment like above or just texts.
+        }
+
+    \section{Research}
+        \longitem{Research Title}{}{Place}{Start Date - End Date}
+        \itemdetails{
+            \textit{Styles here are kept.}
+        }
+    \section{Awards}
+        \shortitem{Title}
+        \itemdetails{Short items can also be used on the right column.}
+    \section{Other}
+        Custom styles can also be used here.
+        
+        For example, a list of publications using BibTeX.
+\end{minipage}
+\end{document}
