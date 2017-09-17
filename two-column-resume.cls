@@ -42,7 +42,7 @@
 % Add a new long item. Title short description will be hidden if empty.
 \newcommand{\longitem}[4]{
     \begin{flushleft}
-        \textbf{#1}\\%
+        {\fontsize{12}{14}\textbf{#1}}\\%
         \ifthenelse{\equal{#2}{}}{}{
             #2\\%
         }
@@ -54,7 +54,7 @@
 % Add a short item.
 \newcommand{\shortitem}[1]{
     \begin{flushleft}
-        \textbf{#1}%
+        {\fontsize{12}{14}\textbf{#1}}%
     \end{flushleft}
 }
 
