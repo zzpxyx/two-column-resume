@@ -9,6 +9,7 @@
 \RequirePackage{textcomp}
 \RequirePackage{titlesec}
 \RequirePackage{ifthen}
+\RequirePackage{xcolor}
 
 \pagestyle{empty}
 
@@ -37,7 +38,7 @@
         \ifthenelse{\equal{#2}{}}{}{
             #2\\%
         }
-        #3 | #4%
+        {\color[HTML]{606060}#3 | #4}%
     \end{flushleft}
 }
 
