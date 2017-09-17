@@ -6,15 +6,18 @@
 \RequirePackage[nosfdefault]{raleway}
 \RequirePackage[default]{droidsans}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{textcomp}
 \RequirePackage{titlesec}
+\RequirePackage{ifthen}
 
 \pagestyle{empty}
 
-\newcommand{\altfont}{\usefont{T1}{Raleway-TLF}{el}{n}}
+\titlespacing{\section}{0px}{0px}{0px}
+\titleformat{\section}{\fontsize{16}{20}\usefont{T1}{Raleway-TLF}{l}{n}}{}{0pt}{}
 
 \newcommand{\name}[2]{
     \begin{center}
-        \fontsize{40}{48}\altfont #1%
+        \fontsize{40}{48}\usefont{T1}{Raleway-TLF}{t}{n} #1%
         ~%
         \fontseries{m}\selectfont #2%
     \end{center}
@@ -26,6 +29,27 @@
     \end{center}
 }
 
-\newcommand{\headerline}{\vspace{-\baselineskip}\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}}
+\newcommand{\headerline}{\vspace{-0.5\baselineskip}\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}\\}
 
-\titlespacing{\section}{0px}{0px}{0px}
+\newcommand{\longitem}[4]{
+    \begin{flushleft}
+        \textbf{#1}\\%
+        \ifthenelse{\equal{#2}{}}{}{
+            #2\\%
+        }
+        #3 | #4%
+    \end{flushleft}
+}
+
+\newcommand{\shortitem}[1]{
+    \begin{flushleft}
+        \textbf{#1}
+    \end{flushleft}
+}
+
+\newcommand{\itemdetails}[1]{
+    \vspace{-1.5\baselineskip}
+    \begin{flushleft}
+        #1
+    \end{flushleft}
+}
