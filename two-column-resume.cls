@@ -30,7 +30,7 @@
 % Show contact after name.
 \newcommand{\contact}[1]{
     \begin{center}
-        #1%
+        \fontsize{12}{14}\selectfont #1%
     \end{center}
 }
 
